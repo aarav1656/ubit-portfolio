@@ -1,16 +1,29 @@
 'use client';
 
 import React from 'react';
-
+import { ConnectButton } from 'thirdweb/react';
 import Link from 'next/link';
 import { useSelectedLayoutSegment } from 'next/navigation';
 
 import useScroll from '@/hooks/use-scroll';
 import { cn } from '@/lib/utils';
-
+import { createWallet, inAppWallet } from "thirdweb/wallets";
+import { createThirdwebClient } from 'thirdweb';
+ 
 const Header = () => {
   const scrolled = useScroll(5);
   const selectedLayout = useSelectedLayoutSegment();
+
+  const wallets = [
+    inAppWallet(),
+    createWallet("io.metamask"),
+    createWallet("com.coinbase.wallet"),
+    createWallet("me.rainbow"),
+  ];
+
+  const client = createThirdwebClient({
+    clientId: process.env.NEXT_PUBLIC_THIRDWEB_CLIENT_ID || "",
+  });
 
   return (
     <div
@@ -34,9 +47,12 @@ const Header = () => {
         </div>
 
         <div className="hidden md:block">
-          <div className="h-8 w-8 rounded-full bg-zinc-300 flex items-center justify-center text-center">
-            <span className="text-lg font-bold">L</span>
-          </div>
+        <ConnectButton
+          client={client}
+          wallets={wallets}
+          theme={"dark"}
+          connectModal={{ size: "wide" }}
+        />
         </div>
       </div>
     </div>

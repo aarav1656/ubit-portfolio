@@ -24,7 +24,7 @@ const Home = () => {
               <p className="text-gray-600">Get a comprehensive view of all internal transactions associated with your address.</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-              <Image src="/transfers.png" alt="Token Balances" width={100} height={100}  className="w-full h-48 object-cover mb-4 rounded-lg"/>
+              <Image src="/ubit.png" alt="Token Balances" width={100} height={100}  className="w-full h-48 object-cover mb-4 rounded-lg"/>
               <h3 className="font-bold text-2xl mb-2">Token Balances</h3>
               <p className="text-gray-600">Monitor your token balances and stay updated with your holdings.</p>
             </div>
