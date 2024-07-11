@@ -8,6 +8,7 @@ import HeaderMobile from '@/components/header-mobile';
 import MarginWidthWrapper from '@/components/margin-width-wrapper';
 import PageWrapper from '@/components/page-wrapper';
 import SideNav from '@/components/side-nav';
+import { Providers } from './providers';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -27,11 +28,19 @@ export default function RootLayout({
         <div className="flex">
           <SideNav />
           <main className="flex-1">
-            <MarginWidthWrapper>
+          <Providers>
+             <MarginWidthWrapper> 
               <Header />
               <HeaderMobile />
-              <PageWrapper>{children}</PageWrapper>
+           
+              <PageWrapper>
+
+              {children}
+              
+              </PageWrapper>
+
             </MarginWidthWrapper>
+            </Providers >
           </main>
         </div>
       </body>

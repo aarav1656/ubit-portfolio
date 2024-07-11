@@ -9,18 +9,18 @@ export const SIDENAV_ITEMS: SideNavItem[] = [
     icon: <Icon icon="lucide:home" width="24" height="24" />,
   },
   {
-    title: 'Projects',
+    title: 'Transfers',
     path: '/projects',
     icon: <Icon icon="lucide:folder" width="24" height="24" />,
     submenu: true,
     subMenuItems: [
-      { title: 'All', path: '/projects' },
-      { title: 'Web Design', path: '/projects/web-design' },
-      { title: 'Graphic Design', path: '/projects/graphic-design' },
+      { title: 'ERC-20 transfers', path: '/projects' },
+      { title: 'ERC-721 transfers', path: '/projects/web-design' },
+      { title: 'Tokens', path: '/projects/graphic-design' },
     ],
   },
   {
-    title: 'Messages',
+    title: 'Contracts deplyed',
     path: '/messages',
     icon: <Icon icon="lucide:mail" width="24" height="24" />,
   },
