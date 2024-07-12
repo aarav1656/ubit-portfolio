@@ -1,7 +1,8 @@
+import Image from 'next/image';
 import React from 'react';
 
 const Home = () => {
-  
+
   return (
     <div className="min-h-screen bg-gray-100 p-8">
       <header className="text-center mb-12">
@@ -13,17 +14,17 @@ const Home = () => {
           <h2 className="font-bold text-4xl mb-8 text-center">Features</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-              <img src="path/to/image1.jpg" alt="Token Transfers" className="w-full h-48 object-cover mb-4 rounded-lg"/>
+              <Image src="path/to/image1.jpg" alt="Token Transfers" className="w-full h-48 object-cover mb-4 rounded-lg"/>
               <h3 className="font-bold text-2xl mb-2">Token Transfers</h3>
               <p className="text-gray-600">View all your token transfers in one place with detailed information.</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-              <img src="path/to/image2.jpg" alt="Internal Transactions" className="w-full h-48 object-cover mb-4 rounded-lg"/>
+              <Image src="path/to/image2.jpg" alt="Internal Transactions" className="w-full h-48 object-cover mb-4 rounded-lg"/>
               <h3 className="font-bold text-2xl mb-2">Internal Transactions</h3>
               <p className="text-gray-600">Get a comprehensive view of all internal transactions associated with your address.</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-              <img src="path/to/image3.jpg" alt="Token Balances" className="w-full h-48 object-cover mb-4 rounded-lg"/>
+              <Image src="path/to/image3.jpg" alt="Token Balances" className="w-full h-48 object-cover mb-4 rounded-lg"/>
               <h3 className="font-bold text-2xl mb-2">Token Balances</h3>
               <p className="text-gray-600">Monitor your token balances and stay updated with your holdings.</p>
             </div>
