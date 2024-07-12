@@ -14,9 +14,9 @@ export const SIDENAV_ITEMS: SideNavItem[] = [
     icon: <Icon icon="lucide:folder" width="24" height="24" />,
     submenu: true,
     subMenuItems: [
-      { title: 'ERC-20 transfers', path: '/projects' },
-      { title: 'ERC-721 transfers', path: '/projects/web-design' },
-      { title: 'Tokens', path: '/projects/graphic-design' },
+      { title: 'Transactions', path: '/projects' },
+      { title: 'Internal Transactions', path: '/projects/web-design' },
+      { title: 'Tokens transfers', path: '/projects/graphic-design' },
     ],
   },
   {
