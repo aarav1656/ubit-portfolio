@@ -1,10 +1,17 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 
+type Token = {
+  name: string;
+  symbol: string;
+  balance: string;
+  decimals: string;
+};
+
 const AccountPage = () => {
   const [address, setAddress] = useState('0x5fdF6c1954Fe15327278AcD45696cD7Eb514AFd3');
-  const [balance, setBalance] = useState(null);
-  const [tokens, setTokens] = useState([]);
+  const [balance, setBalance] = useState<string | null>(null);
+  const [tokens, setTokens] = useState<Token[]>([]);
   const [noDataMessage, setNoDataMessage] = useState('');
   const [noTokenMessage, setNoTokenMessage] = useState('');
 
@@ -45,7 +52,7 @@ const AccountPage = () => {
       });
   }, [address]);
 
-  const handleChange = (e) => {
+  const handleChange = (e : any) => {
     setAddress(e.target.value);
   };
 

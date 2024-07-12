@@ -21,11 +21,11 @@ const ProjectsPage = () => {
       .catch(error => console.log('Error fetching data:', error));
   }, [address]);
 
-  const handleChange = (e) => {
+  const handleChange = (e : any) => {
     setAddress(e.target.value);
   };
 
-  const handlePageChange = (pageNumber) => {
+  const handlePageChange = (pageNumber : number) => {
     setCurrentPage(pageNumber);
   };
 

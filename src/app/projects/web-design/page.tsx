@@ -28,11 +28,11 @@ const WebDesignPage = () => {
       });
   }, [txhash]);
 
-  const handleChange = (e) => {
+  const handleChange = (e: any) => {
     setTxhash(e.target.value);
   };
 
-  const handlePageChange = (pageNumber) => {
+  const handlePageChange = (pageNumber : number) => {
     setCurrentPage(pageNumber);
   };
 
